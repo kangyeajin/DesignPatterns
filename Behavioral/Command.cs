@@ -3,7 +3,7 @@
 // 다양한 요청들이 있는 메서드들을 인수화 할 수 있도록 하며,
 // 요청의 실행을 지연 또는 대기열에 넣을 수 있도록 하고, 또 실행 취소할 수 있는 작업을 지원
 namespace DesignPatterns.Behavioral
-{
+{/*-------------------- 
     // The Command interface declares a method for executing a command.
     public interface ICommand
     {
@@ -116,14 +116,17 @@ namespace DesignPatterns.Behavioral
         {
             // The client code can parameterize an invoker with any commands.
             Invoker invoker = new Invoker ();
-            invoker.SetOnStart ( new SimpleCommand ( "Say Hi!" ) ); //요청 또는 간단한 작업을 객체화?
+            invoker.SetOnStart ( new SimpleCommand ( "Say Hi!" ) );
             Receiver receiver = new Receiver ();
             invoker.SetOnFinish ( new ComplexCommand ( receiver, "Send email", "Save report" ) );
 
+            // 요청들을 주문서에 담은 뒤 요청
+            // 주문서 = 커맨드 역할
+            // 요리할 준비가 될 때까지 대기열에 남아 있음
             invoker.DoSomethingImportant ();
         }
     }
-
+-------------------- */
     /*output
 
     Invoker: Does anybody want something done before I begin?
